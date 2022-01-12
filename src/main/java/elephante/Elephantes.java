@@ -16,7 +16,7 @@ public class Elephantes {
     public static void main(String[] args) {
         //declaracion attributos
         Scanner sc = new Scanner(System.in);
-        int teldaAraña, pisoElephante, sumPisoElephantes = 0, contoreElephantes = 1;
+        int teldaAraña, pisoElephante, sumPisoElephantes = 0, contoreElephantes = 0;
 
         do {
             System.out.println("Introduce el piso que suporte la telda de Araña");
@@ -36,9 +36,9 @@ public class Elephantes {
             } while (pisoElephante != 0);
 
             if (sumPisoElephantes > teldaAraña) {
-                System.out.println("Se pudieron montar los " + contoreElephantes + " premiros porque con el " + (contoreElephantes+1) + " se rompa la tilda");
+                System.out.println("Se pudieron montar los " + (contoreElephantes--)+ " premiros porque con el " + (contoreElephantes+1) + " se rompa la tilda");
             } else if (sumPisoElephantes < teldaAraña) {
-                System.out.println("Se pudieron montar los " + contoreElephantes + " porque porque la tela no se rompió y ya no había más elefantes en la cola");
+                System.out.println("Se pudieron montar los " + contoreElephantes + " porque la tela no se rompió y ya no había más elefantes en la cola");
             }
         } while (pisoElephante < 0 || pisoElephante > 109);
 
